@@ -1,0 +1,19 @@
+.header {
+    background-color:dimgray; 
+    height:2rem; 
+    color:white;
+}
+
+.footer {
+    background-color:dimgray; 
+    height:2rem; 
+    color:white;
+}
+
+.title {
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translateY(-50%) translateX(-50%); 
+    -webkit-transform:translateY(-50%) translateX(-50%);
+}
