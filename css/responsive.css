@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 576px) { 
+    .title {
+        font-size:2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size:2.8rem;
+    }
+}
+
+@media screen and (min-width:992px) { 
+    .speech:before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left:0;
+      right:0;
+      margin:auto;
+      border: 15px solid transparent;
+      border-bottom: 20px solid dimgray;
+      width: 0;
+    }
+    
+    .title {
+        font-size:3.8rem;
+    }
+}

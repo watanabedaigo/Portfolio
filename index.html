@@ -3,144 +3,329 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet"  href="css/main.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/magnific-popup.css">
         <title>DAIGO WATANABE'S PORTFOLIO</title>
     </head>
     <body>
         <!--ヘッダー-->
-        <header>
-            <div class="d-flex justify-content-center align-items-center header">
-                <!--自己紹介アイコン-->
-                <span class="mr-4"><i class="fas fa-user-alt"></i></span>
-                <!--技術アイコン-->
-                <span class="mr-4 ml-4"><i class="fas fa-pen"></i></span>
-                <!--作成物アイコン-->
-                <span class="mr-4 ml-4"><i class="fas fa-file-code"></i></span>
-                <!--お問い合わせアイコン-->
-                <span class="ml-4"><i class="fas fa-envelope"></i></span>
-            </div>
+        <header class="d-flex justify-content-center align-items-center w-100 header">
+            <!--自己紹介アイコン-->
+            <span class="mr-4 about-icon"><i class="fas fa-user-alt"></i></span>
+            <!--技術アイコン-->
+            <span class="mr-4 ml-4 skills-icon"><i class="fas fa-pen"></i></span>
+            <!--作成物アイコン-->
+            <span class="mr-4 ml-4 works-icon"><i class="fas fa-file-code"></i></span>
+            <!--お問い合わせアイコン-->
+            <span class="ml-4 contact-icon"><i class="fas fa-envelope"></i></span>
         </header>
         
+        <!--余白-->
+        <div style="height:2rem;"></div>
+        
         <!--トップ写真-->
-        <div style="position:relative;">
+        <div class="top-img">
             <!--写真-->
-            <img src="img/top-img.jpg" class="w-100"></img>
+            <img src="img/top.png" class="w-100"></img>
             <!--タイトル-->
             <p class="d-inline-block text-center m-auto title">DAIGO WATANABE'S<br>PORTFOLIO</p>
         </div>
-        
+
         <!--コンテンツ-->
-        <div class="container mx-auto">
+        <div class="container p-md-2 p-0 mx-auto">
             <!--自己紹介-->
-            <div>
-                <p class="text-center"><i class="fas fa-user-alt mr-1"></i>About<i class="fas fa-user-alt ml-1"></i></p>
-                <div>
+            <div class="p-4 bottom-line" id="about">
+                <div class="text-center">
+                    <p class="d-inline-block line_narrow"><i class="fas fa-user-alt mr-1"></i>About<i class="fas fa-user-alt ml-1"></i></p>
+                </div>
+                <div class="p-2 row no-gutters">
                     <!--写真と一言-->
-                    <div>
+                    <div class="offset-lg-1 col-lg-3 d-flex flex-lg-column justify-content-center">
+                        <div class="mr-lg-0 mr-3">
+                            <p class="mx-auto icon"></p>
+                        </div>
+                        <div class="ml-lg-0 ml-3 mt-lg-4 mt-0 d-flex justify-content-center align-items-center">
+                            <p class="d-inline-block rounded p-2 speech">My profile !!!</p>
+                        </div>
                     </div>
                     <!--自己紹介文-->
-                    <div>
+                    <div class="col-lg-8 p-2">
+                        <!--簡単な自己紹介-->
+                        <p><i class="fas fa-question-circle mr-1"></i>簡単な自己紹介</p>
+                        <p style="padding-left:1.2rem;">渡邊代悟と申します。東京都在住２６歳、趣味は旅行です。</p>
+                        <!--職歴-->
+                        <p class="mt-1"><i class="fas fa-question-circle mr-1"></i>職歴は？</p>
+                        <p style="padding-left:1.2rem;">2017/4~ 都立高校物理教員</p>
+                        <!--転職理由-->
+                        <p class="mt-1"><i class="fas fa-question-circle mr-1"></i>転職理由は？</p>
+                        <p style="padding-left:1.2rem;">一度きりの人生、やらなかった後悔を残したくないからです。</p>
+                        <!--なぜエンジニア？-->
+                        <p class="mt-1"><i class="fas fa-question-circle mr-1"></i>なぜエンジニア？</p>
+                        <ol type="1" class="m-0">
+                            <li>0から1の価値を生み出すことができることに魅力を感じたから。</li>
+                            <li>手に職をつけることで、今後のキャリアの選択肢を増やすことができると考えたから。</li>
+                            <li>学習する中で、描いた機能を実装できた時の楽しさを知ったから。</li>
+                        </ol>
+                        <!--今後の目標-->
+                        <p class="mt-1"><i class="fas fa-question-circle mr-1"></i>今後の目標は？</p>
+                        <ol type="1" class="m-0">
+                            <li>フリーランスになり、自分の可能性に賭け、挑戦してみたい。</li>
+                            <li>サービスを立ち上げ、社会に新たな価値を生み出したい。</li>
+                            <li>趣味の旅行をしながら働きたい。</li>
+                        </ol>
                     </div>
                 </div>
             </div>
             
             <!--技術-->
-            <div>
-                <p class="text-center"><i class="fas fa-pen mr-1"></i>Skills<i class="fas fa-pen ml-1"></i></p>
-                <div class="row no-gutters">
+            <div class="p-4 bottom-line" id="skills">
+                <div class="text-center">
+                    <p class="d-inline-block line_narrow"><i class="fas fa-pen mr-1"></i>Skills<i class="fas fa-pen ml-1"></i></p>
+                </div>
+                <div class="row no-gutters p-2">
                     <!--フロントエンド-->
-                    <div class="col-md-4 col-12">
+                    <div class="col-lg-3 col-md-4 col-6 p-2 text-center">
                         <p><i class="fab fa-html5 mr-1"></i>フロントエンド</p>
                         <!--詳細-->
                         <div>
+                            <ul style="padding-left:1rem;">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                            </ul>
                         </div>
                     </div>
                     <!--バックエンド-->
-                    <div class="col-md-4 col-12">
+                    <div class="col-lg-3 col-md-4 col-6 p-2 text-center">
                         <p><i class="fab fa-php mr-1"></i>バックエンド</p>
                         <!--詳細-->
                         <div>
+                            <ul style="padding-left:1rem;">
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                            </ul>
                         </div>
                     </div>
                     <!--DB-->
-                    <div class="col-md-4 col-12">
+                    <div class="col-lg-3 col-md-4 col-6 p-2 text-center">
                         <p><i class="fas fa-network-wired mr-1"></i>DB</p>
                         <!--詳細-->
                         <div>
+                            <ul style="padding-left:1rem;">
+                                <li>MySQL</li>
+                                <li>NoSQL(firebase)</li>
+                            </ul>
                         </div>
                     </div>
                     <!--インフラ-->
-                    <div class="col-md-4 col-12">
+                    <div class="col-lg-3 col-md-4 col-6 p-2 text-center">
                         <p><i class="fas fa-network-wired mr-1"></i>インフラ</p>
                         <!--詳細-->
                         <div>
+                            <ul style="padding-left:1rem;">
+                                <li>AWS(EC2,S3)</li>
+                                <li>firebase</li>
+                                <li>Heroku</li>
+                            </ul>
                         </div>
                     </div>
                     <!--その他-->
-                    <div class="col-md-4 col-12">
+                    <div class="col-lg-3 col-md-4 col-6 p-2 text-center">
                         <p><i class="fab fa-github-square mr-1"></i>その他</p>
                         <!--詳細-->
                         <div>
+                            <ul style="padding-left:1rem;">
+                                <li>git</li>
+                                <li>GitHub</li>
+                                <li>Bootstrap</li>
+                            </ul>
                         </div>
                     </div>
                     <!--今後学習したいもの-->
-                    <div class="col-md-4 col-12">
+                    <div class="col-lg-3 col-md-4 col-6 p-2 text-center">
                         <p><i class="fas fa-pen mr-1 mr-1"></i>学習中</p>
                         <!--詳細-->
                         <div>
+                            <ul style="padding-left:1rem;">
+                                <li>docker</li>
+                                <li>Linax</li>
+                                <li>Vue.js</li>
+                                <li>WordPress</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!--作成物-->
-            <div>
-                <p class="text-center"><i class="fas fa-file-code mr-1"></i>Works<i class="fas fa-file-code ml-1"></i></p>
-                <div class="row no-gutters">
-                    <!--ポートフォリオ-->
-                    <div class="col-md-3 col-6">
-                        <p>Portfolio</p>
-                        <img src=""></img>
-                        <!--詳細-->
-                        <div>
-                        </div>
-                    </div>
+            <div class="p-4 bottom-line" id="works">
+                <div class="text-center">
+                    <p class="d-inline-block line_narrow"><i class="fas fa-file-code mr-1"></i>Works<i class="fas fa-file-code ml-1"></i></p>
+                </div>
+                <div class="row no-gutters p-2">
                     <!--MatchingPets-->
-                    <div class="col-md-3 col-6">
-                        <p>MatchingPets</p>
-                        <img src=""></img>
-                        <!--詳細-->
+                    <div class="col-md-4 col-6 p-2 portfolio" data-toggle="modal" data-target="#MatchingPets">
                         <div>
+                            <img src="img/MatchingPets/top-short.png" class="img-fluid"></img>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    
+                    <div class="modal fade" id="MatchingPets" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <!--詳細-->
+                                    <div class="p-md-2 p-0">
+                                        <!--写真-->
+                                        <div class="row no-gutters">
+                                            <img src="img/MatchingPets/top.png" class="img-fluid col-3 p-1">
+                                            <img src="img/MatchingPets/varieties.png" class="img-fluid col-3 p-1">
+                                            <img src="img/MatchingPets/candidates.png" class="img-fluid col-3 p-1">
+                                            <img src="img/MatchingPets/candidateshow.png" class="img-fluid col-3 p-1">
+                                        </div>
+                                        <!--概要-->
+                                        <p class="text-center w-25 mt-2 line_narrow">概要</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">新しい家族と出会うためのペットポータルサイト。飼いたい品種がどのペットショップにいるのか調べることができる。</p>
+                                        <!--URL-->
+                                        <p class="text-center w-25 line_narrow">URL</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a href="https://matchingpet.herokuapp.com/" target="_blank">https://matchingpet.herokuapp.com/</a></p>
+                                        <!--使用言語-->
+                                        <p class="text-center w-25 line_narrow">技術</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;">HTML/CSS/JavaScript/jQuery/PHP/Laravel/Bootstrap</p>
+                                        <!--GitHubソースコード-->
+                                        <p class="text-center w-25 line_narrow">コード</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a href="https://github.com/watanabedaigo/MatchingPets" target="_blank">https://github.com/watanabedaigo/MatchingPets</a></p>
+                                        <!--作成理由-->
+                                        <p class="text-center w-25 line_narrow">作成理由</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">
+                                        パグを飼いたいと思った時があるのだが、希望の年齢、性別、毛色のパグがどのペットショップにいるのかを探すのが難しかった。
+                                        大手のペットショップは自社のサイトで飼育している犬や猫をを公開しているが、個人のペットショップでは公開しているところがほとんどない。
+                                        しかし、新しい家族を迎えるわけなので、できるだけ多くのパグと会いたかった。そこで、犬だけに限らず、様々なペットの候補が一覧で表示され、
+                                        飼いたい品種がどこにいるのかが分かるような、ペットのポータルサイトを作成しようと考えた。
+                                        <br>（現在はテストデータで公開している。今後は実際にペットショップに営業に行き、記載する候補数を増やしていきたいと考えている。）
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                     <!--TravelMemories-->
-                    <div class="col-md-3 col-6">
-                        <p>旅行掲示板</p>
-                        <img src=""></img>
-                        <!--詳細-->
+                    <div class="col-md-4 col-6 p-2 portfolio" data-toggle="modal" data-target="#TravelMemories">
                         <div>
+                            <img src="img/TravelMemories/top-short.png" class="img-fluid"></img>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    
+                    <div class="modal fade" id="TravelMemories" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <!--詳細-->
+                                    <div class="p-md-2 p-0">
+                                        <!--写真-->
+                                        <div class="row no-gutters">
+                                            <img src="img/TravelMemories/top.png" class="img-fluid col-3 p-1">
+                                            <!--<img src="img/TravelMemories/.png" class="img-fluid col-3 p-1">-->
+                                            <!--<img src="img/TravelMemories/.png" class="img-fluid col-3 p-1">-->
+                                            <!--<img src="img/TravelMemories/.png" class="img-fluid col-3 p-1">-->
+                                        </div>
+                                        <!--概要-->
+                                        <p class="text-center w-25 mt-2 line_narrow">概要</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">最高の旅行をするために、様々なユーザーと情報を共有することができる旅行掲示板。</p>
+                                        <!--URL-->
+                                        <p class="text-center w-25 line_narrow">URL</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3"><a href="https://your-memories-dd52e.web.app/" target="_blank">https://your-memories-dd52e.web.app/</a></p>
+                                        <!--使用言語-->
+                                        <p class="text-center w-25 line_narrow">技術</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">HTML/CSS/JavaScript/jQuery/firebase/Bootstrap</p>
+                                        <!--GitHubソースコード-->
+                                        <p class="text-center w-25 line_narrow">コード</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3"><a href="https://github.com/watanabedaigo/TravelMemories" target="_blank">https://github.com/watanabedaigo/TravelMemories</a></p>
+                                        <!--作成理由-->
+                                        <p class="text-center w-25 line_narrow">作成理由</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">きっかけは、趣味が旅行ということだ。目的地を決めず、気の赴くままに行動するのも好きだが、目的地を決めて観光するのも好きである。目的地を決める際、実際に足を運んだ人の感想や撮った写真のような生の情報がとても参考になる。そこで、旅先の思い出を共有し、ユーザーの旅行の手助けができるような、そんな場があったらいいと思い作成した。</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+        
+                    <!--ポートフォリオ-->
+                    <div class="col-md-4 col-6 p-2 portfolio" data-toggle="modal" data-target="#Portfolio">
+                        <div>
+                            <img src="img/Portfolio/top-short.png" class="img-fluid"></img>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    
+                    <div class="modal fade" id="Portfolio" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <!--詳細-->
+                                    <div class="p-md-2 p-0">
+                                        <!--写真-->
+                                        <div class="row no-gutters">
+                                            <img src="img/Portfolio/top.png" class="img-fluid col-3 p-1">
+                                            <img src="img/Portfolio/skills.png" class="img-fluid col-3 p-1">
+                                            <img src="img/Portfolio/contact.png" class="img-fluid col-3 p-1">
+                                        </div>
+                                        <!--概要-->
+                                        <p class="text-center w-25 mt-2 line_narrow">概要</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">2020/12 作成</p>
+                                        <!--URL-->
+                                        <p class="text-center w-25 line_narrow">URL</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">未完成</p>
+                                        <!--使用言語-->
+                                        <p class="text-center w-25 line_narrow">技術</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">HTML/CSS/JavaScript/jQuery/bootstrap</p>
+                                        <!--GitHubソースコード-->
+                                        <p class="text-center w-25 line_narrow">コード</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3"><a href="https://github.com/watanabedaigo/Portfolio" target="_blank">https://github.com/watanabedaigo/Portfolio</a></p>
+                                        <!--作成理由-->
+                                        <p class="text-center w-25 line_narrow">工夫点</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">シンプルで分かりやすいものを目指した。目を引くようなカラフルなトップ写真と、落ち着いた雰囲気なモノトーンのコンテンツのコントラストから、印象に残るようなものを目指した。トップの写真は今まで行った旅行先の写真を合成したもので、自分の趣味を取り入れたものを目指した。</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <!--お問い合わせ-->
-            <div class="text-center">
-                <p><i class="fas fa-envelope mr-1"></i>Contact<i class="fas fa-envelope ml-1"></i></p>
-                <div>
+            <div class="text-center p-4" id="contact">
+                <div class="text-center">
+                    <p class="d-inline-block line_narrow"><i class="fas fa-envelope mr-1"></i>Contact<i class="fas fa-envelope ml-1"></i></p>
+                </div>
+                <div class="p-2">
                     <!--フォーム-->
                     <form>
                         <!--氏名-->
                         <div class="form-group">
                             <label for="name">お名前</label>
-                            <input type="text" name="name" id="name" class="form-control col-md-8 col-12 mx-auto">
+                            <input type="text" name="name" id="name" class="form-control col-md-6 col-8 mx-auto">
                         </div>
                         <!--問い合わせ内容-->
                         <div class="form-group">
                             <label for="content">お問い合わせ内容</label>
-                            <textarea name="content" id="content" rows="6" class="form-control col-md-8 col-12 mx-auto"></textarea>
+                            <textarea name="content" id="content" rows="8" class="form-control col-md-6 col-8 mx-auto"></textarea>
                         </div>
                         <!--送信ボタン-->
                         <input type="submit" value="送信" class="btn btn-secondary">
@@ -158,8 +343,9 @@
         </footer>
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="js/main.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
