@@ -4,6 +4,15 @@
     .title {
         font-size:2rem;
     }
+    
+    .icon {
+        width:100px;
+        height:100px;
+    }
+    
+    .top-img {
+        height:auto!important;
+    }
 }
 
 @media screen and (min-width: 768px) {
