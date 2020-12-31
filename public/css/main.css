@@ -41,6 +41,10 @@ li {
     color:white;
 }
 
+.strong-line {
+    background:rgba(0, 0, 0, 0) linear-gradient(transparent 50%, gold 0%) repeat scroll 0 0;
+}
+
 .title {
     position:absolute; 
     top:50%; 
