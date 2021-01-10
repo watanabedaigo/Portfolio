@@ -1,0 +1,47 @@
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+
+@media screen and (min-width: $breakpoint-small) { 
+    .title {
+        font-size:2rem;
+    }
+    
+    .icon {
+        background-size:150px 150px;
+        width:100px;
+        height:100px;
+    }
+    
+    .top-img {
+        height:auto!important;
+    }
+    
+    .work {
+        font-size:1rem;
+    }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+    .title {
+        font-size:2.8rem;
+    }
+}
+
+@media screen and (min-width: $breakpoint-large) { 
+    .speech:before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left:0;
+      right:0;
+      margin:auto;
+      border: 15px solid transparent;
+      border-bottom: 20px solid dimgray;
+      width: 0;
+    }
+    
+    .title {
+        font-size:3.8rem;
+    }
+}
