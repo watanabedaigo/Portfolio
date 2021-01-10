@@ -18,5 +18,9 @@ You can check out the app on [firebase!](https://portfolio-f4b3a.web.app/)
 ### Works
 - [MatchingPets](https://matchingpet.herokuapp.com/) / [GitHub](https://github.com/watanabedaigo/MatchingPets)
 - [TravelMemories](https://your-memories-dd52e.web.app/) / [GitHub](https://github.com/watanabedaigo/TravelMemories)
-- Portfolio / [GitHub(this page)](https://github.com/watanabedaigo/Portfolio)
+- [Portfolio](https://portfolio-f4b3a.web.app/) / [GitHub(this page)](https://github.com/watanabedaigo/Portfolio)
 ### Contact
+you can send e-mail to me.
+if you have some question, please send e-mail !
+
+Thank you for reading !
