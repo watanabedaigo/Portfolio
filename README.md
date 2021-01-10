@@ -25,5 +25,3 @@ These are my works.Please see something.
 ### Contact
 you can send e-mail to me.
 if you have some question, please send e-mail !
-
-Thank you for reading !
