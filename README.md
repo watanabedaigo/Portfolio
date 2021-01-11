@@ -19,7 +19,7 @@ I have studied these contents.
 - Infrastructure
 - Others
 - Studying now
-<img width="1129" alt="スクリーンショット 2021-01-11 14 19 23" src="https://user-images.githubusercontent.com/62239012/104149111-69729f80-5418-11eb-85d7-45b7b7fa366c.png">
+<img width="1124" alt="スクリーンショット 2021-01-11 14 19 23" src="https://user-images.githubusercontent.com/62239012/104152373-afccfc00-5422-11eb-99b4-cf964f6e6744.png">
 
 ### Works
 These are my works. Please check out something.
