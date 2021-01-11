@@ -9,6 +9,7 @@ This is self-introduction.
 - The reason for job change
 - The reason for being engineers
 - goal
+<img width="918" alt="スクリーンショット 2021-01-11 14 13 05" src="https://user-images.githubusercontent.com/62239012/104148978-dfc2d200-5417-11eb-9516-582fb672aae7.png">
 ### Skills
 I have studied these contents.
 - Frontend
