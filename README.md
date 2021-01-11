@@ -9,9 +9,6 @@ This is self-introduction.
 - The reason for job change
 - The reason for being engineers
 - goal
-![alt](画像URL)
-![代替文字列](URL "タイトル")
-<img src="attach:cat.jpg" alt="attach:cat" title="attach:cat" width="200" height="200">
 ### Skills
 I have studied these contents.
 - Frontend
