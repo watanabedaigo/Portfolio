@@ -1,20 +1,26 @@
 @media screen and (min-width: 576px) {
   .title {
-    font-size: 2rem; }
-
+    font-size: 2rem;
+  }
   .icon {
     background-size: 150px 150px;
     width: 100px;
-    height: 100px; }
-
+    height: 100px;
+  }
   .top-img {
-    height: auto !important; }
-
+    height: auto !important;
+  }
   .work {
-    font-size: 1rem; } }
+    font-size: 1rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .title {
-    font-size: 2.8rem; } }
+    font-size: 2.8rem;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .speech:before {
     content: "";
@@ -25,9 +31,19 @@
     margin: auto;
     border: 15px solid transparent;
     border-bottom: 20px solid dimgray;
-    width: 0; }
-
+    width: 0;
+  }
   .title {
-    font-size: 3.8rem; } }
-
+    font-size: 3.8rem;
+  }
+  h5 {
+    font-size: 2rem !important;
+  }
+  p, h6, li {
+    font-size: 1.5rem !important;
+  }
+  footer p {
+    font-size: 1rem !important;
+  }
+}
 /*# sourceMappingURL=responsive.css.map */

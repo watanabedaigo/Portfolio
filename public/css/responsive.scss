@@ -44,4 +44,18 @@ $breakpoint-large: 992px;
     .title {
         font-size:3.8rem;
     }
+
+    h5 {
+        font-size:2rem!important;
+    }
+
+    p , h6 , li {
+        font-size:1.5rem!important;
+    }
+
+    footer {
+        p {
+            font-size:1rem!important;
+        }
+    }
 }
