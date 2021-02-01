@@ -1,0 +1,10 @@
+$background-color:dimgray;
+$imgDir:"../img/";
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+
+@mixin simple-color {
+    background-color:$background-color;
+    color:white;
+}

@@ -1,6 +1,4 @@
-$breakpoint-small: 576px;
-$breakpoint-medium: 768px;
-$breakpoint-large: 992px;
+@import "settings";
 
 @media screen and (min-width: $breakpoint-small) { 
     .title {
@@ -37,7 +35,7 @@ $breakpoint-large: 992px;
       right:0;
       margin:auto;
       border: 15px solid transparent;
-      border-bottom: 20px solid dimgray;
+      border-bottom: 20px solid $background-color;
       width: 0;
     }
     

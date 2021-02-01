@@ -12,18 +12,18 @@ li {
 }
 
 .header {
-  background-color: dimgray;
   height: 2rem;
-  color: white;
   position: fixed;
   z-index: 1;
+  background-color: dimgray;
+  color: white;
 }
 
 .footer {
-  background-color: dimgray;
   height: 2rem;
-  color: white;
   font-size: .5rem;
+  background-color: dimgray;
+  color: white;
 }
 
 .top-img {
@@ -36,8 +36,8 @@ li {
 }
 
 .btn {
-  background-color: dimgray;
   border-color: dimgray;
+  background-color: dimgray;
   color: white;
 }
 
@@ -77,7 +77,7 @@ li {
   position: relative;
   color: white;
   font-size: 16px;
-  background-color: dimgray;
+  background-color: #9c9c9c;
 }
 
 .speech:before {
@@ -108,7 +108,7 @@ li {
 }
 
 .twitter {
-  color: dimgray;
+  color: #9c9c9c;
   font-size: 3rem;
 }
 
