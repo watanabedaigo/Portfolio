@@ -8,10 +8,10 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
         <link rel="stylesheet" href="css/magnific-popup.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <title>DAIGO WATANABE'S PORTFOLIO</title>
     </head>
     <body>
-
         <header class="d-flex justify-content-center align-items-center w-100 header">
             <span class="mr-4 about-icon"><i class="fas fa-user-alt"></i></span>
             <span class="mr-4 ml-4 skills-icon"><i class="fas fa-pen"></i></span>
@@ -28,10 +28,10 @@
 
         <div class="container pr-md-2 pl-md-2 p-0 mx-auto">
             <div class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="about">
-                <div class="text-center">
+                <div class="text-center pb-4">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-user-alt mr-1"></i>About<i class="fas fa-user-alt ml-1"></i></h5>
                 </div>
-                <div class="p-2 row no-gutters">
+                <div class="row no-gutters">
                     <div class="offset-lg-1 col-lg-3 d-flex flex-lg-column justify-content-center">
                         <div class="mr-lg-0 mr-3">
                             <p class="mx-auto icon"></p>
@@ -40,94 +40,47 @@
                             <p class="d-inline-block rounded p-2 speech">My profile !!!</p>
                         </div>
                     </div>
+
                     <div class="col-lg-8 p-2">
-                        <h6><i class="fas fa-question-circle mr-1"></i>簡単な自己紹介</h6>
-                        <p style="padding-left:1.2rem;">渡邊代悟と申します。東京都在住26歳、趣味は旅行です。</p>
-                        <h6 class="mt-1"><i class="fas fa-question-circle mr-1"></i>職歴は？</h6>
-                        <p style="padding-left:1.2rem;">2017/4~2021/3 都立高校教員（物理）<br>
-                            2021/4~ 株式会社アンティーファクトリー
-                        </p>
-                        <h6 class="mt-1"><i class="fas fa-question-circle mr-1"></i>業務内容は？</h6>
-                        <p style="padding-left:1.2rem;">フロントエンドエンジニアとして、UI仕様設計から実装までを行う予定です。<br>
-                            詳細は<strong class="strong-line works-icon">Works</strong>をご覧ください。
-                        </p>
-                        <h6 class="mt-1"><i class="fas fa-question-circle mr-1"></i>今後の目標は？</h6>
-                        <p style="padding-left:1.2rem;">個人で生き抜くことのできる技術力を身に付けたいです。</p>
+                        <about-component
+                            v-for="about in abouts"
+                            v-bind:key="about.id"
+                            v-bind:id="about.id"
+                            v-bind:question="about.question"
+                            v-bind:answer="about.answer"
+                            v-bind:answer2="about.answer2"
+                        ></about-component>
                     </div>
                 </div>
             </div>
             
             <div class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="skills">
-                <div class="text-center">
+                <div class="text-center pb-4">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-pen mr-1"></i>Skills<i class="fas fa-pen ml-1"></i></h5>
                 </div>
-                <div class="row no-gutters p-2">
-                    <div class="col-lg-3 col-md-4 col-6 p-sm-2 pb-3 text-center">
-                        <h6><i class="fab fa-html5 mr-1"></i>フロントエンド</h6>
-                        <div>
-                            <ul style="padding-left:1rem;" class="skills">
-                                <li class="skill1">HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>jQuery</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6 p-sm-2 pb-3 text-center">
-                        <h6><i class="fab fa-php mr-1"></i>バックエンド</h6>
-                        <div>
-                            <ul style="padding-left:1rem;">
-                                <li>PHP(Laravel)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6 p-sm-2 pb-3 text-center">
-                        <h6><i class="fas fa-network-wired mr-1"></i>DataBase</h6>
-                        <div>
-                            <ul style="padding-left:1rem;">
-                                <li>MySQL</li>
-                                <li>Realtime<br>Database</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6 p-sm-2 pb-3 text-center">
-                        <h6><i class="fas fa-network-wired mr-1"></i>インフラ</h6>
-                        <div>
-                            <ul style="padding-left:1rem;">
-                                <li>AWS(EC2,S3)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6 p-sm-2 pb-3 text-center">
-                        <h6><i class="fab fa-github-square mr-1"></i>その他</h6>
-                        <div>
-                            <ul style="padding-left:1rem;">
-                                <li>git</li>
-                                <li>GitHub</li>
-                                <li>firebase</li>
-                                <li>Heroku</li>
-                                <li>Bootstrap</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-6 p-sm-2 pb-3 text-center">
-                        <h6><i class="fas fa-pen mr-1 mr-1"></i>学習中</h6>
-                        <div>
-                            <ul style="padding-left:1rem;">
-                                <li>Sass</li>
-                                <li>Vue.js</li>
-                                <li>React</li>
-                            </ul>
-                        </div>
-                    </div>
+                
+                <div class="row no-gutters">
+                    <skills-component
+                        v-for="skill in skills"
+                        v-bind:key="skill.id"
+                        v-bind:id="skill.id"
+                        v-bind:show="skill.show"
+                        v-bind:icon="skill.icon"
+                        v-bind:icon2="skill.icon2"
+                        v-bind:icon3="skill.icon3"
+                        v-bind:icon4="skill.icon4"
+                        v-bind:icon5="skill.icon5"
+                        v-bind:icon6="skill.icon6"
+                        v-bind:details="skill.details"
+                    ></skills-component>
                 </div>
             </div>
             
             <div class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="works">
-                <div class="text-center">
+                <div class="text-center pb-4">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-file-code mr-1"></i>Works<i class="fas fa-file-code ml-1"></i></h5>
                 </div>
-                <div class="row no-gutters p-2">
+                <div class="row no-gutters">
                     <div class="col-12">
                         <h6 class="text-center mt-2">（個人での制作）</h6>
                     </div>
@@ -159,15 +112,12 @@
                                             </div>
                                         </div>
                                         <h5 class="text-left pl-3 mt-2 line_narrow" id="label1">概要</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">
-                                        新しい家族と出会うためのペットポータルサイトです。
-                                        飼いたい品種がどのペットショップにいるのか調べることができます。
-                                        </p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">{{ MatchingPets.about }}</p>
                                         <h5 class="text-left pl-3 line_narrow">URL</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a href="https://matchingpet.herokuapp.com/" target="_blank">https://matchingpet.herokuapp.com/</a></p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="MatchingPets.URL" target="_blank">{{ MatchingPets.URL }}</a></p>
                                         <h5 class="text-left pl-3 line_narrow">技術・コード</h5>
-                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">HTML/CSS/JavaScript/jQuery/PHP/Laravel/Bootstrap</p>
-                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a href="https://github.com/watanabedaigo/MatchingPets" target="_blank">https://github.com/watanabedaigo/MatchingPets</a></p>
+                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">{{ MatchingPets.skills }}</p>
+                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="MatchingPets.GitHub" target="_blank">{{ MatchingPets.GitHub }}</a></p>
                                         <h5 class="text-left pl-3 line_narrow">作成理由</h5>
                                         <p class="pt-1 pr-3 pb-2 pl-3">
                                         パグを飼いたいと思った時があるのですが、希望の年齢、性別、毛色のパグがどのペットショップにいるのかを探すのが難しかったです。
@@ -178,17 +128,7 @@
                                         </p>
                                         <h5 class="text-left pl-3 line_narrow">苦労した点</h5>
                                         <ul class="pt-1 pb-2">
-                                            <li>MVCモデルの理解</li>
-                                            <li>１対多の関係の紐付け</li>
-                                            <li>検索機能の実装</li>
-                                            <li>並び替え機能の実装</li>
-                                            <li>ページネーションのパラメータ引継ぎ</li>
-                                            <li>マルチログインの実装</li>
-                                            <li>メール送信機能の実装</li>
-                                            <li>お気に入り機能の実装</li>
-                                            <li>条件分岐による表示内容の切り替え</li>
-                                            <li>ループ処理の回数による条件分岐</li>
-                                            <li>レスポンシブデザインの実装</li>
+                                            <li v-for="difficulty in MatchingPets.difficulties">{{ difficulty }}</li>
                                         </ul>
                                         <h5 class="text-left pl-3 line_narrow">作成を終えて</h5>
                                         <p class="pt-1 pr-3 pb-2 pl-3">
@@ -235,12 +175,12 @@
                                             </div>
                                         </div>
                                         <h5 class="text-left pl-3 mt-2 line_narrow" id="label2">概要</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">最高の旅行をするために、様々なユーザーと情報を共有することができる旅行掲示板。</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">{{ TravelMemories.about }}</p>
                                         <h5 class="text-left pl-3 line_narrow">URL</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a href="https://your-memories-dd52e.web.app/" target="_blank">https://your-memories-dd52e.web.app/</a></p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="TravelMemories.URL" target="_blank">{{ TravelMemories.URL }}</a></p>
                                         <h5 class="text-left pl-3 line_narrow">技術・コード</h5>
-                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">HTML/CSS/JavaScript/jQuery/firebase/Bootstrap</p>
-                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a href="https://github.com/watanabedaigo/TravelMemories" target="_blank">https://github.com/watanabedaigo/TravelMemories</a></p>
+                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">{{ TravelMemories.skills }}</p>
+                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="TravelMemories.GitHub" target="_blank">{{ TravelMemories.GitHub }}</a></p>
                                         <h5 class="text-left pl-3 line_narrow">作成理由</h5>
                                         <p class="pt-1 pr-3 pb-2 pl-3">
                                         きっかけは、趣味が旅行ということです。目的地を決めず、気の赴くままに行動するのも好きですが、目的地を決めて観光するのも好きです。
@@ -248,14 +188,7 @@
                                         </p>
                                         <h5 class="text-left pl-3 line_narrow">苦労した点</h5>
                                         <ul class="pt-1 pb-2">
-                                            <li>firebaseでのページ遷移時の変数の受け渡し</li>
-                                            <li>非同期処理の理解</li>
-                                            <li>ログイン状態による表示の切り替え</li>
-                                            <li>RealtimeDatabaseのchildイベントの理解</li>
-                                            <li>thenによる処理の順番の指定</li>
-                                            <li>setとpushの違いの理解</li>
-                                            <li>Storageのupload,downloadメソッド流れ</li>
-                                            <li>DataSnapshotの理解</li>
+                                            <li v-for="difficulty in TravelMemories.difficulties">{{ difficulty }}</li>
                                         </ul>
                                         <h5 class="text-left pl-3 line_narrow">作成を終えて</h5>
                                         <p class="pt-1 pr-3 pb-2 pl-3">
@@ -304,12 +237,12 @@
                                             </div>
                                         </div>
                                         <h5 class="text-left pl-3 mt-2 line_narrow" id="label3">概要</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">2020/12 作成</p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3">{{ Portfolio.about }}</p>
                                         <h5 class="text-left pl-3 line_narrow">URL</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a href="https://portfolio-f4b3a.web.app/" target="_blank">https://portfolio-f4b3a.web.app/</a></p>
+                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="Portfolio.URL" target="_blank">{{ Portfolio.URL }}</a></p>
                                         <h5 class="text-left pl-3 line_narrow">技術・コード</h5>
-                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">HTML/CSS/JavaScript/jQuery/Bootstrap</p>
-                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a href="https://github.com/watanabedaigo/Portfolio" target="_blank">https://github.com/watanabedaigo/Portfolio</a></p>
+                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">{{ Portfolio.skills }}</p>
+                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="Portfolio.GitHub" target="_blank">{{ Portfolio.GitHub }}</a></p>
                                         <h5 class="text-left pl-3 line_narrow">工夫点</h5>
                                         <p class="pt-1 pr-3 pb-2 pl-3">
                                         シンプルで分かりやすいことを前提にしつつ、目を引くようなカラフルなトップ写真と、
@@ -318,9 +251,7 @@
                                         </p>
                                         <h5 class="text-left pl-3 line_narrow">苦労した点</h5>
                                         <ul class="pt-1 pb-2">
-                                            <li>デザインの構成</li>
-                                            <li>モーダルの作成</li>
-                                            <li>レスポンシブデザインの実装</li>
+                                            <li v-for="difficulty in Portfolio.difficulties">{{ difficulty }}</li>
                                         </ul>
                                         <h5 class="text-left pl-3 line_narrow">作成を終えて</h5>
                                         <p class="pt-1 pr-3 pb-2 pl-3">
@@ -352,23 +283,6 @@
                     <a href="https://twitter.com/Q5khZxoivNcpFLu"><i class="fab fa-twitter-square twitter"></i></a>
                     <p>DMお待ちしております！</p>
                 </div>
-                <!-- <div class="pt-2">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">お名前</label>
-                            <input type="text" name="name" id="name" class="form-control col-md-6 col-12 mx-md-auto">
-                        </div>
-                        <div class="form-group">
-                            <label for="mail">メールアドレス</label>
-                            <input type="text" name="mail" id="mail" class="form-control col-md-6 col-12 mx-md-auto">
-                        </div>
-                        <div class="form-group">
-                            <label for="content">お問い合わせ内容</label>
-                            <textarea name="content" id="content" rows="8" class="form-control col-md-6 col-12 mx-md-auto"></textarea>
-                        </div>
-                        <input type="submit" value="送信" class="btn btn-secondary">
-                    </form>
-                </div> -->
             </div>
         </div>
         

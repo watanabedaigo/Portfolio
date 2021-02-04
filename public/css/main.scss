@@ -84,7 +84,7 @@ li {
     left:-30px; 
     margin-top:-10px;
     border:10px solid transparent;
-    border-right:20px solid $background-color;
+    border-right:20px solid lighten($background-color,20%);
 }
 
 .portfolio {

@@ -87,7 +87,7 @@ li {
   left: -30px;
   margin-top: -10px;
   border: 10px solid transparent;
-  border-right: 20px solid dimgray;
+  border-right: 20px solid #9c9c9c;
 }
 
 .portfolio {

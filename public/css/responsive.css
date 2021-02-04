@@ -30,7 +30,7 @@
     right: 0;
     margin: auto;
     border: 15px solid transparent;
-    border-bottom: 20px solid dimgray;
+    border-bottom: 20px solid #9c9c9c;
     width: 0;
   }
   .title {
