@@ -17,13 +17,13 @@ li {
     height:2rem; 
     position:fixed;
     z-index:1;
-    @include simple-color;
+    @include simple-color(white);
 }
 
 .footer {
     height:2rem; 
     font-size:.5rem;
-    @include simple-color;
+    @include simple-color(white);
 }
 
 .top-img {
@@ -37,7 +37,7 @@ li {
 
 .btn {
     border-color:$background-color;
-    @include simple-color;
+    @include simple-color(white);
 }
 
 .strong-line {

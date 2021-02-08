@@ -12,6 +12,7 @@
         <title>DAIGO WATANABE'S PORTFOLIO</title>
     </head>
     <body>
+        <!-- ヘッダー -->
         <header class="d-flex justify-content-center align-items-center w-100 header">
             <span class="mr-4 about-icon"><i class="fas fa-user-alt"></i></span>
             <span class="mr-4 ml-4 skills-icon"><i class="fas fa-pen"></i></span>
@@ -21,13 +22,16 @@
         
         <div style="height:2rem;"></div>
         
+        <!-- トップ画像 -->
         <div class="top-img">
             <img src="img/top.png" class="w-100 h-100" alt="top-img">
             <h1 class="font-weight-bold d-inline-block text-center m-auto title">DAIGO WATANABE'S<br>PORTFOLIO</h1>
         </div>
 
+        <!-- 内容 -->
         <div class="container pr-md-2 pl-md-2 p-0 mx-auto">
-            <div class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="about">
+            <!-- About -->
+            <section class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-2 pl-2 bottom-line" id="about">
                 <div class="text-center pb-4">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-user-alt mr-1"></i>About<i class="fas fa-user-alt ml-1"></i></h5>
                 </div>
@@ -52,9 +56,10 @@
                         ></about-component>
                     </div>
                 </div>
-            </div>
+            </section>
             
-            <div class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="skills">
+            <!-- Skills -->
+            <section class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="skills">
                 <div class="text-center pb-4">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-pen mr-1"></i>Skills<i class="fas fa-pen ml-1"></i></h5>
                 </div>
@@ -74,9 +79,10 @@
                         v-bind:details="skill.details"
                     ></skills-component>
                 </div>
-            </div>
+            </section>
             
-            <div class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="works">
+            <!-- works -->
+            <section class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="works">
                 <div class="text-center pb-4">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-file-code mr-1"></i>Works<i class="fas fa-file-code ml-1"></i></h5>
                 </div>
@@ -84,198 +90,40 @@
                     <div class="col-12">
                         <h6 class="text-center mt-2">（個人での制作）</h6>
                     </div>
-                    <div class="col-md-4 col-6 p-2 portfolio text-center" data-toggle="modal" data-target="#MatchingPets">
-                        <h6 class="work">ペットのポータルサイト</h6>
-                        <div>
-                            <img src="img/MatchingPets/top-short.png" class="img-fluid" alt="MatchingPets">
-                        </div>
-                        <div class="cover"></div>
-                    </div>
-                    
-                    <div class="modal fade" id="MatchingPets" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="p-md-2 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-3 p-1">
-                                                <img src="img/MatchingPets/top.png" class="img-fluid" alt="MatchingPets-detail-1">
-                                            </div>
-                                            <div class="col-3 p-1">
-                                                <img src="img/MatchingPets/varieties.png" class="img-fluid" alt="MatchingPets-detail-2">
-                                            </div>
-                                            <div class="col-3 p-1">
-                                                <img src="img/MatchingPets/candidates.png" class="img-fluid" alt="MatchingPets-detail-3">
-                                            </div>
-                                            <div class="col-3 p-1">
-                                                <img src="img/MatchingPets/candidateshow.png" class="img-fluid" alt="MatchingPets-detail-4">
-                                            </div>
-                                        </div>
-                                        <h5 class="text-left pl-3 mt-2 line_narrow" id="label1">概要</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">{{ MatchingPets.about }}</p>
-                                        <h5 class="text-left pl-3 line_narrow">URL</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="MatchingPets.URL" target="_blank">{{ MatchingPets.URL }}</a></p>
-                                        <h5 class="text-left pl-3 line_narrow">技術・コード</h5>
-                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">{{ MatchingPets.skills }}</p>
-                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="MatchingPets.GitHub" target="_blank">{{ MatchingPets.GitHub }}</a></p>
-                                        <h5 class="text-left pl-3 line_narrow">作成理由</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">
-                                        パグを飼いたいと思った時があるのですが、希望の年齢、性別、毛色のパグがどのペットショップにいるのかを探すのが難しかったです。
-                                        現在、大手のペットショップは自社のサイトで飼育している犬や猫をを公開しているのですが、個人のペットショップでは公開しているところがほとんどないです。
-                                        しかし、新しい家族を迎えるわけなので、できるだけ多くのパグと会いたいという気持ちがあり、ペットのポータルサイトがあったらいいなと思い始めました。
-                                        そこで、犬だけに限らず、様々なペットの候補が一覧で表示され、飼いたい品種がどこにいるのかが分かるようなペットのポータルサイトを作成しました。
-                                        <br>（現在はテストデータで公開しています。）
-                                        </p>
-                                        <h5 class="text-left pl-3 line_narrow">苦労した点</h5>
-                                        <ul class="pt-1 pb-2">
-                                            <li v-for="difficulty in MatchingPets.difficulties">{{ difficulty }}</li>
-                                        </ul>
-                                        <h5 class="text-left pl-3 line_narrow">作成を終えて</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">
-                                        <strong class="strong-line">楽しかった</strong>の一言に尽きます。<br>
-                                        コンセプトを決め、0からデザインを考え、一つ一つの機能を実装していく。その中で、学習したことをアウトプットしたり、分からないものを一つ一つ調べて解決したり中で、
-                                        思い描いた機能やデザインが実装できた時の喜び、楽しさを知ることができました。<br>
-                                        また、検索の仕方がいかに大切かを知ることもできました。機能を実装する時やエラーを解決する時、初めはエラーコードをそのままググったり、検索上位にあるまとめの記事を1~2個読み、
-                                        使えそうな内容を引用してみたりしていました。しかし、エラーの原因は開発環境、言語のバージョンによっても異なるため、うまくいかないことが多く、本質的な解決になっていないことを痛感しました。
-                                        そこからは、抽象的に調べてから、その中で出てきたキーワード一つ一つを具体的に調べ、全体像を把握するようにしました。
-                                        そして、仮説・検証・考察の流れに従い、選択肢を一つずつ潰すように心がけました。手を動かし、なんとか解決した時の喜びは忘れられません。<br>
-                                        初めてのオリジナルアプリということで、思い入れのある作品です。まだまだコードに読みづらい所があると思うので、今後も細部の修正をし、大切に育てていきたいと思っています。
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 col-6 p-2 portfolio text-center" data-toggle="modal" data-target="#TravelMemories">
-                        <h6 class="work">旅行掲示板</h6>
-                        <div>
-                            <img src="img/TravelMemories/top-short.png" class="img-fluid" alt="TravelMemories">
-                        </div>
-                        <div class="cover"></div>
-                    </div>
-                    
-                    <div class="modal fade" id="TravelMemories" tabindex="-1" role="dialog" aria-labelledby="label2" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="p-md-2 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-3 p-1">
-                                                <img src="img/TravelMemories/top.png" class="img-fluid" alt="TravelMemories-detail-1">
-                                            </div>
-                                            <div class="col-3 p-1">
-                                                <img src="img/TravelMemories/show.png" class="img-fluid" alt="TravelMemories-detail-2">
-                                            </div>
-                                            <div class="col-3 p-1">
-                                                <img src="img/TravelMemories/img.png" class="img-fluid" alt="TravelMemories-detail-3">
-                                            </div>
-                                        </div>
-                                        <h5 class="text-left pl-3 mt-2 line_narrow" id="label2">概要</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">{{ TravelMemories.about }}</p>
-                                        <h5 class="text-left pl-3 line_narrow">URL</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="TravelMemories.URL" target="_blank">{{ TravelMemories.URL }}</a></p>
-                                        <h5 class="text-left pl-3 line_narrow">技術・コード</h5>
-                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">{{ TravelMemories.skills }}</p>
-                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="TravelMemories.GitHub" target="_blank">{{ TravelMemories.GitHub }}</a></p>
-                                        <h5 class="text-left pl-3 line_narrow">作成理由</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">
-                                        きっかけは、趣味が旅行ということです。目的地を決めず、気の赴くままに行動するのも好きですが、目的地を決めて観光するのも好きです。
-                                        目的地を決める際、実際に足を運んだ人の感想や撮った写真のような生の情報が欲しいので、旅先の思い出を共有できるような掲示板を作成しました。
-                                        </p>
-                                        <h5 class="text-left pl-3 line_narrow">苦労した点</h5>
-                                        <ul class="pt-1 pb-2">
-                                            <li v-for="difficulty in TravelMemories.difficulties">{{ difficulty }}</li>
-                                        </ul>
-                                        <h5 class="text-left pl-3 line_narrow">作成を終えて</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">
-                                        掲示板なので、リアルタイムに更新されること、投稿の度にページ遷移が行われないストレスレスなものであることを重要視し、
-                                        firebaseのRealtimeDatabaseを軸にサービスを作成しました。<br>
-                                        変数の受け渡し方、データの追加の仕方、写真の保存の仕方、データベースがRDBではなくスキーマレスであることなど、Laravelでの開発とは異なる点が多くて
-                                        苦戦しました。しかし、ドキュメントが分かりやすく整理されていたため、試行錯誤して開発することができました。<br>
-                                        また、直前までLaravelでの開発を進めていたため、<strong class="strong-line">BaaSを用いることで、JavaScriptのみでデータのやりとりができることに感動しました。 </strong>
-                                        それぞれの違いを踏まえて、用途に応じて使い分けることができるようになりたいと思いました。<br>
-                                        旅行が好きでよく行くので、その思い出を残すという意味も込めて、サービスを活用していきたいと思います。
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>            
-        
-                    <div class="col-md-4 col-6 p-2 portfolio text-center" data-toggle="modal" data-target="#Portfolio">
-                        <h6 class="work">ポートフォリオ</h6>
-                        <div>
-                            <img src="img/Portfolio/top-short.png" class="img-fluid" alt="Portfolio">
-                        </div>
-                        <div class="cover"></div>
-                    </div>
-                    
-                    <div class="modal fade" id="Portfolio" tabindex="-1" role="dialog" aria-labelledby="label3" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="p-md-2 p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-3 p-1">
-                                                <img src="img/Portfolio/top.png" class="img-fluid" alt="Portfolio-detail-1">
-                                            </div>
-                                            <div class="col-3 p-1">
-                                                <img src="img/Portfolio/skills.png" class="img-fluid" alt="Portfolio-detail-2">
-                                            </div>
-                                            <div class="col-3 p-1">
-                                                <img src="img/Portfolio/contact.png" class="img-fluid" alt="Portfolio-detail-3">
-                                            </div>
-                                            <div class="col-3 p-1">
-                                                <img src="img/Portfolio/modal.png" class="img-fluid" alt="Portfolio-detail-4">
-                                            </div>
-                                        </div>
-                                        <h5 class="text-left pl-3 mt-2 line_narrow" id="label3">概要</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">{{ Portfolio.about }}</p>
-                                        <h5 class="text-left pl-3 line_narrow">URL</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="Portfolio.URL" target="_blank">{{ Portfolio.URL }}</a></p>
-                                        <h5 class="text-left pl-3 line_narrow">技術・コード</h5>
-                                        <p class="pt-1 pr-3 pl-3" style="word-wrap:break-word;">{{ Portfolio.skills }}</p>
-                                        <p class="pr-3 pb-2 pl-3" style="word-wrap:break-word;"><a v-bind:href="Portfolio.GitHub" target="_blank">{{ Portfolio.GitHub }}</a></p>
-                                        <h5 class="text-left pl-3 line_narrow">工夫点</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">
-                                        シンプルで分かりやすいことを前提にしつつ、目を引くようなカラフルなトップ写真と、
-                                        落ち着いた雰囲気なモノトーンのコンテンツのコントラストから、印象に残るようなポートフォリオを目指しました。
-                                        トップの写真は今まで行った旅行先の写真を合成したもので、自分の趣味を取り入れてみました。
-                                        </p>
-                                        <h5 class="text-left pl-3 line_narrow">苦労した点</h5>
-                                        <ul class="pt-1 pb-2">
-                                            <li v-for="difficulty in Portfolio.difficulties">{{ difficulty }}</li>
-                                        </ul>
-                                        <h5 class="text-left pl-3 line_narrow">作成を終えて</h5>
-                                        <p class="pt-1 pr-3 pb-2 pl-3">
-                                        Bootstrapの便利さを再認識しました。特に、レスポンシブデザインを実装する際のグリッドシステムの有用性は素晴らしいと思います。
-                                        コーディングする際は、まずはBootstrapでおまかなデザインを実装し、細かい部分をcssで書くという流れでとても効率良く作業を進めることができました。<br>
-                                        ポートフォリオの作成を終えて、ようやくエンジニアへの転職活動が始まりました。
-                                        <strong class="strong-line">これからの新たな人生への期待が膨らむと同時に、これがスタートであることを再認識し、ひたむきに努力していこうという決意が固まりました。</strong>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-12">
+                    <works-component
+                        v-for="personal_work in personal_works"
+                        v-bind:key="personal_work.id"
+                        v-bind:id="personal_work.id"
+                        v-bind:name="personal_work.name"
+                        v-bind:top="personal_work.top"
+                        v-bind:img1="personal_work.img1"
+                        v-bind:img2="personal_work.img2"
+                        v-bind:img3="personal_work.img3"
+                        v-bind:img4="personal_work.img4"
+                        v-bind:about="personal_work.about"
+                        v-bind:url="personal_work.url"
+                        v-bind:skills="personal_work.skills"
+                        v-bind:github="personal_work.github"
+                        v-bind:difficulties="personal_work.difficulties"
+                        v-bind:addreason="personal_work.addreason"
+                        v-bind:reason="personal_work.reason"
+                        v-bind:addingenuity="personal_work.addingenuity"
+                        v-bind:ingenuity="personal_work.addingenuity"
+                        v-bind:impression="personal_work.impression"
+                    ></works-component>
+
+                    <!-- <div class="col-12">
                         <h6 class="text-center mt-2">（業務での制作）</h6>
                     </div>
-                </div>
-            </div>
+                    <work-component
+                        v-for="bussiness_work in business_works"
+                    ></work-component> -->
+                </div> 
+            </section>
             
-            <div class="p-4 text-center" id="contact">
+            <!-- Contact -->
+            <section class="p-4 text-center" id="contact">
                 <div class="text-center">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-envelope mr-1"></i>Contact<i class="fas fa-envelope ml-1"></i></h5>
                 </div>
@@ -283,9 +131,9 @@
                     <a href="https://twitter.com/Q5khZxoivNcpFLu"><i class="fab fa-twitter-square twitter"></i></a>
                     <p>DMお待ちしております！</p>
                 </div>
-            </div>
+            </section>
         </div>
-        
+    
         <footer>
             <div class="d-flex justify-content-center align-items-center footer">
                 <p class="m-0">Copyright &copy; 2020 DAIGO WATANABE</p>
