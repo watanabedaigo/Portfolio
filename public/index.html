@@ -49,10 +49,7 @@
                         <about-component
                             v-for="about in abouts"
                             v-bind:key="about.id"
-                            v-bind:id="about.id"
-                            v-bind:question="about.question"
-                            v-bind:answer="about.answer"
-                            v-bind:answer2="about.answer2"
+                            v-bind:about="about"
                         ></about-component>
                     </div>
                 </div>
@@ -68,15 +65,7 @@
                     <skills-component
                         v-for="skill in skills"
                         v-bind:key="skill.id"
-                        v-bind:id="skill.id"
-                        v-bind:show="skill.show"
-                        v-bind:icon="skill.icon"
-                        v-bind:icon2="skill.icon2"
-                        v-bind:icon3="skill.icon3"
-                        v-bind:icon4="skill.icon4"
-                        v-bind:icon5="skill.icon5"
-                        v-bind:icon6="skill.icon6"
-                        v-bind:details="skill.details"
+                        v-bind:skill="skill"
                     ></skills-component>
                 </div>
             </section>
@@ -94,23 +83,7 @@
                     <works-component
                         v-for="personal_work in personal_works"
                         v-bind:key="personal_work.id"
-                        v-bind:id="personal_work.id"
-                        v-bind:name="personal_work.name"
-                        v-bind:top="personal_work.top"
-                        v-bind:img1="personal_work.img1"
-                        v-bind:img2="personal_work.img2"
-                        v-bind:img3="personal_work.img3"
-                        v-bind:img4="personal_work.img4"
-                        v-bind:about="personal_work.about"
-                        v-bind:url="personal_work.url"
-                        v-bind:skills="personal_work.skills"
-                        v-bind:github="personal_work.github"
-                        v-bind:difficulties="personal_work.difficulties"
-                        v-bind:addreason="personal_work.addreason"
-                        v-bind:reason="personal_work.reason"
-                        v-bind:addingenuity="personal_work.addingenuity"
-                        v-bind:ingenuity="personal_work.addingenuity"
-                        v-bind:impression="personal_work.impression"
+                        v-bind:personal_work="personal_work"
                     ></works-component>
 
                     <!-- <div class="col-12">
