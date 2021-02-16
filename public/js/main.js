@@ -3,11 +3,10 @@ Vue.component('about-component',{
     template:`
         <div class="mb-3" v-bind:id="about.id">
             <h6><i class="fas fa-question-circle mr-1"></i>{{ about.question }}</h6>
-            <p style="padding-left:1.2rem;">{{ about.answer }}</p>
-            <p style="padding-left:1.2rem;">{{ about.answer2 }}</p>
+            <p style="padding-left:1.2rem;" v-html="about.answer"></p>
         </div>
     `
-});
+})
 
 const about = new Vue({
     el:'#about',
@@ -21,8 +20,9 @@ const about = new Vue({
             {
                 id:'job',
                 question:'職歴は？',
-                answer:'2017/4~2021/3 都立高校教員（物理）',
-                answer2:'2021/4~ 株式会社アンティーファクトリー',
+                answer:`2017/4~2021/3 都立高校教員（物理）<br>
+                        2021/4~ 株式会社アンティーファクトリー
+                `,
             },
             { 
                 id:'detail',
@@ -37,7 +37,7 @@ const about = new Vue({
 
         ],
     },
-});
+})
 
 Vue.component('skills-component',{
     props:['skill'],
@@ -46,12 +46,12 @@ Vue.component('skills-component',{
             <h6><i class="mr-1" v-bind:class="{'fab fa-html5':skill.icon,'fab fa-php':skill.icon2,'fas fa-database':skill.icon3,'fas fa-network-wired':skill.icon4,'fab fa-github-square':skill.icon5,'fas fa-pen':skill.icon6}"></i>{{ skill.show }}</h6>
             <div>
                 <ul style="padding-left:1rem;" class="skills">
-                    <li v-for="detail in skill.details">{{ detail }}</li>
+                    <li v-for="detail in skill.details" v-html="detail"></li>
                 </ul>
             </div>
         </div>
     `
-});
+})
 
 const skills = new Vue({
     el:'#skills',
@@ -82,7 +82,7 @@ const skills = new Vue({
                 icon3:true,
                 details:[
                     'MySQL',
-                    'RealtimeDatabase',
+                    'Realtime<br>Database',
                 ],
             },
             {
@@ -117,7 +117,7 @@ const skills = new Vue({
             },
         ],
     },
-});
+})
 
 Vue.component('works-component',{
     props:['personal_work'],
@@ -188,7 +188,7 @@ Vue.component('works-component',{
             </div>
         </div>
     `
-});
+})
 
 const works = new Vue({
     el:'#works',
@@ -284,7 +284,7 @@ const works = new Vue({
                 img4:'img/Portfolio/modal.png',
                 about:'<strong class="strong-line">2021/2</strong> 更新',
                 url:'https://portfolio-f4b3a.web.app/',
-                skills:'HTML/CSS/JavaScript/jQuery/firebase/Bootstrap',
+                skills:'HTML/CSS/JavaScript/jQuery/Vue.js/firebase/Bootstrap',
                 github:'https://github.com/watanabedaigo/Portfolio',
                 difficulties:[
                     'デザインの構成',
@@ -308,27 +308,7 @@ const works = new Vue({
         business_works:[
         ],
     },
-});
-
-$('.about-icon').on('click',() => {
-    const about = $('#about').offset().top;
-    $("html, body").animate({ scrollTop: about - 20 }, 200);
-});
-
-$('.skills-icon').on('click',() => {
-    const skills = $('#skills').offset().top;
-    $("html, body").animate({ scrollTop: skills - 20}, 200);
-});
-
-$('.works-icon').on('click',() => {
-    const works = $('#works').offset().top;
-    $("html, body").animate({ scrollTop: works - 20 }, 200);
-});
-
-$('.contact-icon').on('click',() => {
-    const contact = $('#contact').offset().top;
-    $("html, body").animate({ scrollTop: contact - 20 }, 200);
-});
+})
 
 $('.cover').hover(function(){
     $(this).css({
@@ -341,3 +321,29 @@ $('.cover').hover(function(){
         opacity:0,
     });
 });
+
+const header = new Vue({
+    el:'header',
+    methods:{
+        scroll:function(event){
+            switch(event.currentTarget){
+                case $('.about-icon')[0]:
+                    const about = $('#about').offset().top;
+                    $("html, body").animate({ scrollTop: about - 20 }, 200);
+                    break;
+                case $('.skills-icon')[0]:
+                    const skills = $('#skills').offset().top;
+                    $("html, body").animate({ scrollTop: skills - 20}, 200);
+                    break;
+                case $('.works-icon')[0]:
+                    const works = $('#works').offset().top;
+                    $("html, body").animate({ scrollTop: works - 20 }, 200);
+                    break;
+                case $('.contact-icon')[0]:
+                    const contact = $('#contact').offset().top;
+                    $("html, body").animate({ scrollTop: contact - 20 }, 200);
+                    break;    
+            }
+        }
+    }
+})

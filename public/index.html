@@ -14,10 +14,10 @@
     <body>
         <!-- ヘッダー -->
         <header class="d-flex justify-content-center align-items-center w-100 header">
-            <span class="mr-4 about-icon"><i class="fas fa-user-alt"></i></span>
-            <span class="mr-4 ml-4 skills-icon"><i class="fas fa-pen"></i></span>
-            <span class="mr-4 ml-4 works-icon"><i class="fas fa-file-code"></i></span>
-            <span class="ml-4 contact-icon"><i class="fas fa-envelope"></i></span>
+            <span class="mr-4 about-icon" v-on:click="scroll"><i class="fas fa-user-alt"></i></span>
+            <span class="mr-4 ml-4 skills-icon" v-on:click="scroll"><i class="fas fa-pen"></i></span>
+            <span class="mr-4 ml-4 works-icon" v-on:click="scroll"><i class="fas fa-file-code"></i></span>
+            <span class="ml-4 contact-icon" v-on:click="scroll"><i class="fas fa-envelope"></i></span>
         </header>
         
         <div style="height:2rem;"></div>
@@ -32,7 +32,7 @@
         <div class="container pr-md-2 pl-md-2 p-0 mx-auto">
             <!-- About -->
             <section class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-2 pl-2 bottom-line" id="about">
-                <div class="text-center pb-4">
+                <div class="text-center pb-4 item">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-user-alt mr-1"></i>About<i class="fas fa-user-alt ml-1"></i></h5>
                 </div>
                 <div class="row no-gutters">
@@ -57,10 +57,10 @@
             
             <!-- Skills -->
             <section class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="skills">
-                <div class="text-center pb-4">
+                <div class="text-center pb-4 item">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-pen mr-1"></i>Skills<i class="fas fa-pen ml-1"></i></h5>
                 </div>
-                
+
                 <div class="row no-gutters">
                     <skills-component
                         v-for="skill in skills"
@@ -72,7 +72,7 @@
             
             <!-- works -->
             <section class="pr-sm-3 pl-sm-3 pt-4 pr-2 pb-4 pl-2 bottom-line" id="works">
-                <div class="text-center pb-4">
+                <div class="text-center pb-4 item">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-file-code mr-1"></i>Works<i class="fas fa-file-code ml-1"></i></h5>
                 </div>
                 <div class="row no-gutters">
@@ -97,12 +97,13 @@
             
             <!-- Contact -->
             <section class="p-4 text-center" id="contact">
-                <div class="text-center">
+                <div class="text-center item">
                     <h5 class="d-inline-block line_narrow"><i class="fas fa-envelope mr-1"></i>Contact<i class="fas fa-envelope ml-1"></i></h5>
                 </div>
-                <div class="mt-2 p-4">
-                    <a href="https://twitter.com/Q5khZxoivNcpFLu"><i class="fab fa-twitter-square twitter"></i></a>
-                    <p>DMお待ちしております！</p>
+                <div class="p-4">
+                    <a href="https://twitter.com/Q5khZxoivNcpFLu" class="mr-3"><i class="fab fa-twitter twitter"></i></a>
+                    <a href="https://qiita.com/Q5khZxoivNcpFLu" class="mr-3"><i class="fab fa-quora qiita"></i></a>
+                    <a href="https://github.com/watanabedaigo"><i class="fab fa-git github"></i></a>
                 </div>
             </section>
         </div>

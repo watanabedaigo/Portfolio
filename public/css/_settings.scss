@@ -8,3 +8,11 @@ $breakpoint-large: 992px;
     background-color:$background-color;
     color:$color;
 }
+
+@mixin icon ($color){
+    font-size:3rem;
+    color:white;
+    background-color:$color;
+    border-radius:.3rem;
+    padding:.4rem;
+}
